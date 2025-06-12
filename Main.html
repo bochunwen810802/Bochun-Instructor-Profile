@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>温柏淳講師履歷</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            line-height: 1.4;
+            color: #333;
+            background: #f5f5f5;
+        }
+        
+        .page {
+            width: 210mm;
+            min-height: 297mm;
+            margin: 20px auto;
+            background: white;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            display: flex;
+            position: relative;
+        }
+        
+        .sidebar {
+            width: 35%;
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 20px 25px;
+        }
+        
+        .main-content {
+            width: 65%;
+            padding: 17px 25px;
+        }
+        
+        .profile-section {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        
+        .profile-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 3px solid white;
+            margin: 0 auto 15px;
+            background: linear-gradient(45deg, #3498db, #2ecc71);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 38px;
+            font-weight: bold;
+            overflow: hidden;
+        }
+        
+        .profile-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .name {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 6px;
+            letter-spacing: 1px;
+        }
+        
+        .title {
+            font-size: 14px;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+        
+        .contact-info {
+            margin: 25px 0;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            font-size: 13px;
+        }
+        
+        .contact-icon {
+            width: 20px;
+            height: 20px;
+            margin-right: 15px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #2c3e50;
+            font-size: 12px;
+        }
+        
+        .sidebar-section {
+            margin-bottom: 20px;
+        }
+        
+        .sidebar-title {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            padding-bottom: 6px;
+            border-bottom: 2px solid rgba(255,255,255,0.3);
+        }
+        
+        .skill-item {
+            margin-bottom: 10px;
+        }
+        
+        .skill-name {
+            font-size: 13px;
+            margin-bottom: 4px;
+        }
+        
+        .skill-bar {
+            height: 4px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 2px;
+            overflow: hidden;
+        }
+        
+        .skill-progress {
+            height: 100%;
+            background: linear-gradient(90deg, #3498db, #2ecc71);
+            border-radius: 2px;
+        }
+        
+        .main-section {
+            margin-bottom: 20px;
+        }
+        
+        .main-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 12px;
+            padding-bottom: 6px;
+            border-bottom: 3px solid #3498db;
+            display: inline-block;
+        }
+        
+        .intro-text {
+            font-size: 14px;
+            line-height: 1.5;
+            color: #555;
+            margin-bottom: 12px;
+        }
+        
+        .course-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+        
+        .course-item {
+            background: linear-gradient(135deg, #3498db, #2ecc71);
+            color: white;
+            padding: 10px;
+            border-radius: 6px;
+            font-weight: 500;
+            text-align: center;
+            font-size: 12px;
+        }
+        
+        .experience-item {
+            margin-bottom: 12px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .experience-item:last-child {
+            border-bottom: none;
+        }
+        
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 6px;
+        }
+        
+        .experience-title {
+            font-size: 13px;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+        
+        .experience-company {
+            font-size: 12px;
+            color: #7f8c8d;
+            margin-bottom: 3px;
+        }
+        
+        .experience-date {
+            font-size: 11px;
+            color: #95a5a6;
+            background: #ecf0f1;
+            padding: 3px 7px;
+            border-radius: 3px;
+        }
+        
+        .experience-desc {
+            font-size: 13px;
+            color: #555;
+            line-height: 1.6;
+        }
+        
+        .award-item {
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+        
+        .award-title {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        
+        .award-desc {
+            font-size: 13px;
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+        
+        .cert-item {
+            background: #ecf0f1;
+            padding: 8px;
+            border-radius: 6px;
+            margin-bottom: 6px;
+            border-left: 3px solid #3498db;
+        }
+        
+        .cert-name {
+            font-weight: 600;
+            color: #2c3e50;
+            font-size: 12px;
+        }
+        
+        .page-break {
+            page-break-before: always;
+        }
+        
+        @media print {
+            body {
+                background: white;
+            }
+            .page {
+                margin: 0;
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 第一頁 -->
+    <div class="page">
+        <div class="sidebar">
+            <div class="profile-section">
+                <div class="profile-img">
+                    <img src="profile-photo.jpg" alt="温柏淳" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div style="display: none; width: 100%; height: 100%; background: linear-gradient(45deg, #3498db, #2ecc71); align-items: center; justify-content: center; font-size: 48px; font-weight: bold; color: white;">温</div>
+                </div>
+                <div class="name">温柏淳</div>
+                <div class="title">專業講師 | AI應用專案管理師</div>
+            </div>
+            
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-icon">📧</div>
+                    <span>bochunwen@gmail.com</span>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">📱</div>
+                    <span>0911-627-510</span>
+                </div>
+            </div>
+            
+            <div class="sidebar-section">
+                <div class="sidebar-title">教育背景</div>
+                <div style="margin-bottom: 20px;">
+                    <div style="font-weight: 600; margin-bottom: 5px;">中正大學</div>
+                    <div style="font-size: 13px; opacity: 0.8;">資訊管理所 碩士</div>
+                </div>
+                <div>
+                    <div style="font-weight: 600; margin-bottom: 5px;">逢甲大學</div>
+                    <div style="font-size: 13px; opacity: 0.8;">都市計畫與空間資訊 學士</div>
+                </div>
+            </div>
+            
+            <div class="sidebar-section">
+                <div class="sidebar-title">專業技能</div>
+                <div class="skill-item">
+                    <div class="skill-name">AI 應用導入</div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 95%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">履歷面試指導</div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 90%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">簡報設計與教學</div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 88%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">職涯規劃</div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 85%"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="sidebar-section">
+                <div class="sidebar-title">認證資格</div>
+                <div class="cert-item">
+                    <div class="cert-name">AWS AI 認證</div>
+                </div>
+                <div class="cert-item">
+                    <div class="cert-name">Google Analytics (分析) 個人認證資格</div>
+                </div>
+                <div class="cert-item">
+                    <div class="cert-name">國際專案管理師PMP</div>
+                </div>
+                <div class="cert-item">
+                    <div class="cert-name">敏捷專案管理師PMI-ACP</div>
+                </div>
+                <div class="cert-item">
+                    <div class="cert-name">Axure RP原型設計及網站需求分析</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="main-content">
+            <div class="main-section">
+                <div class="main-title">講師簡介</div>
+                <div class="intro-text">
+                    現職金融業AI應用專案管理師，具備豐富的政府標案與大學院校講座經驗，專精於AI應用導入、履歷面試指導/職涯規劃及簡報設計等領域，曾服務多家企業與教育機構。
+                    從非資訊背景自學轉職的完整歷程，讓我更能理解學員需求，提供實用且有效的教學內容，致力於協助政府機關、企業、學校培育AI時代所需人才
+                </div>
+            </div>
+            
+            <div class="main-section">
+                <div class="main-title">專業講座課程</div>
+                <div class="course-list">
+                    <div class="course-item">AI應用導入與實作實戰</div>
+                    <div class="course-item">履歷健檢與面試技巧</div>
+                    <div class="course-item">簡報設計與視覺傳達</div>
+                    <div class="course-item">新世代職涯探索與規劃</div>
+                </div>
+            </div>
+            
+            <div class="main-section">
+                <div class="main-title">工作經歷</div>
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div>
+                            <div class="experience-title">AI應用組PM</div>
+                            <div class="experience-company">金融業</div>
+                        </div>
+                        <div class="experience-date">現職</div>
+                    </div>
+                    <div class="experience-desc">
+                        負責 AI 應用導入與跨職能團隊協作，推動金融科技創新專案，具備完整的專案管理與技術整合經驗。
+                    </div>
+                </div>
+                
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div>
+                            <div class="experience-title">軟體專案經理</div>
+                            <div class="experience-company">前職經歷</div>
+                        </div>
+                        <div class="experience-date">2020-2023</div>
+                    </div>
+                    <div class="experience-desc">
+                        負責軟體專案管理、系統分析、UI/UX設計等工作，累積豐富的跨領域技術經驗。
+                    </div>
+                </div>
+            </div>
+            
+            <div class="main-section">
+                <div class="main-title">講師經驗</div>
+                <div class="experience-desc" style="margin-bottom: 15px;">
+                    <strong>政府機關合作：</strong>高雄市教育局、水利署北區水資源局等政府單位講座講師
+                </div>
+                <div class="experience-desc" style="margin-bottom: 15px;">
+                    <strong>大學院校合作：</strong>平鎮國中、新竹成德高中、北區小國MAPS等教育機構特聘講師
+                </div>
+                <div class="experience-desc">
+                    <strong>專業授課領域：</strong>AI應用導入、履歷面試指導、職涯規劃、簡報設計等專業主題
+                </div>
+            </div>
+            
+            <div class="main-section">
+                <div class="main-title">面試實戰經驗</div>
+                <div class="experience-desc">
+                    • 2020年轉職期間，「面五上五」成功錄取五家公司<br>
+                    • 撰寫 Dcard 面試分享文超過 1500 收藏與轉發<br>
+                    • 現任金融業面試官，負責面試 AI Engineer / Data Scientist / Tech Project Manager<br>
+                    • 面試經驗豐富，能提供實用的面試技巧與建議<br>
+                    • 撰寫 Dcard 面試分享文超過 1500 收藏與轉發<br>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 第二頁 -->
+    <div class="page page-break">
+        <div class="sidebar">
+            <div class="sidebar-section">
+                <div class="sidebar-title">特殊經歷</div>
+                <div style="margin-bottom: 20px;">
+                    <div style="font-weight: 600; margin-bottom: 5px; font-size: 14px;">青年諮詢委員</div>
+                    <div style="font-size: 12px; opacity: 0.8; line-height: 1.5;">臺中市政府第二屆/第三屆青年諮詢委員會委員</div>
+                </div>
+                <div>
+                    <div style="font-weight: 600; margin-bottom: 5px; font-size: 14px;">社群創辦人</div>
+                    <div style="font-size: 12px; opacity: 0.8; line-height: 1.5;">粉絲專頁「簡報即戰力Perfect Slides」創辦人，追蹤人數1.3萬</div>
+                </div>
+            </div>
+            
+            <div class="sidebar-section">
+                <div class="sidebar-title">技術專長</div>
+                <div style="font-size: 12px; line-height: 1.4; opacity: 0.9;">
+                    • LLM 大型語言模型應用<br>
+                    • Vube Coding 程式設計<br>
+                    • 數據分析儀錶板設計<br>
+                    • 系統分析與設計<br>
+                    • UI/UX 設計<br>
+                </div>
+            </div>
+            
+            <div class="sidebar-section" hidden>
+                <div class="sidebar-title">聯絡資訊</div>
+                <div class="contact-item">
+                    <div class="contact-icon">🏆</div>
+                    <span>Vibe Coding 作品集展示</span>
+                                  </div>
+                <div class="contact-item">
+                    <div class="contact-icon">📘</div>
+                    <span>PerfectSlides 社群</span>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">🎯</div>
+                    <span>青年委員會</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="main-content">
+            <div class="main-section">
+                <div class="main-title">AI 競賽與實作亮點</div>
+                
+                <div class="award-item">
+                    <div class="award-title">🏆 交通部公路局第一屆資料創新應用競賽 - 傑出獎（全國第二名）</div>
+                    <div class="award-desc">
+                        <strong>主題：</strong>AI即時路況解碼與智慧緩解時間預測系統<br>
+                        <strong>成果：</strong>125組隊伍中脫穎而出，獲得全國第二名<br>
+                        <strong>技術亮點：</strong>LLM 自然語言解碼事故內容、資料前處理 + 多源通報分析、ChatGPT + Chart.js 動態呈現、即時圖像資訊流整合<br>
+                        <strong>日期：</strong>2025年4月26日
+                    </div>
+                </div>
+                
+                <div class="award-item">
+                    <div class="award-title">🏆 113年國道智慧交通管理創意競賽 - 優勝獎（第二名）</div>
+                    <div class="award-desc">
+                        <strong>主題：</strong>國道智慧交通管理與壅塞預測系統<br>
+                        <strong>技術亮點：</strong>STGCN、LSTM 預測交通流量與壅塞、LightGBM 事故排解時間預測、整合事故、施工、氣象資料進行路線建議<br>
+                        <strong>專案效益：</strong>提升駕駛決策效率、優化國道資源調度
+                    </div>
+                </div>
+            </div>
+            
+            <div class="main-section">
+                <div class="main-title">獲獎紀錄</div>
+                <div class="award-item" style="background: linear-gradient(135deg, #2c3e50, #34495e);">
+                    <div class="award-title">勞動部勞動力發展署履歷競賽 - 中文履歷組佳作</div>
+                    <div class="award-desc">
+                        <strong>競賽名稱：</strong>109年人生勝利組－履戰履勝<br>
+                        <strong>主辦單位：</strong>勞動部勞動力發展署中彰投分署<br>
+                        <strong>獲獎時間：</strong>2020年8月21日<br>
+                                            </div>
+                </div>
+            </div>
+            
+            <div class="main-section">
+                <div class="main-title">課程特色與教學理念</div>
+                <div class="intro-text">
+                    <strong>1. AI應用導入與實作實戰</strong><br>
+                    結合實際競賽經驗與業界實務，從理論到實作，協助學員掌握 AI 技術在不同領域的應用，適合公部門、教育界、企業及初階入門對象。
+                </div>
+                <div class="intro-text">
+                    <strong>2. 履歷健檢與面試技巧</strong><br>
+                    基於「面五上五」成功經驗與現任面試官身份，提供最實用的履歷優化建議與面試技巧，適合職場新人與轉職者。
+                </div>
+                <div class="intro-text">
+                    <strong>3. 新世代職涯探索與規劃</strong><br>
+                    結合個人跨領域轉職經驗，協助學員找到適合的職涯方向。適合高中、大學生及新鮮人。
+                </div>
+                <div class="intro-text">
+                    <strong>4. 簡報設計實戰</strong><br>
+                    運用豐富的簡報設計實務經驗，教授專業簡報設計技巧與視覺呈現方法，適合內部訓練、教師增能、學生培育。
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 第三頁 -->
+    <div class="page page-break">
+        <div class="sidebar">
+            <div class="sidebar-section">
+                <div class="sidebar-title">演講統計</div>
+                <div style="text-align: center; margin-bottom: 15px;">
+                    <div style="font-size: 28px; font-weight: bold; color: #3498db;">25+</div>
+                    <div style="font-size: 11px; opacity: 0.8;">場演講經驗</div>
+                </div>
+                <div style="text-align: center; margin-bottom: 15px;">
+                    <div style="font-size: 20px; font-weight: bold; color: #2ecc71;">5</div>
+                    <div style="font-size: 11px; opacity: 0.8;">年講師資歷</div>
+                </div>
+            </div>
+            
+            <div class="sidebar-section">
+                <div class="sidebar-title">演講領域分布</div>
+                <div class="skill-item">
+                    <div class="skill-name">簡報設計 (10場)</div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 50%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">職涯規劃 (4場)</div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 22%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">AI應用 (2場)</div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 20%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">系統分析 (4場)</div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 11%"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="sidebar-section">
+                <div class="sidebar-title">服務對象</div>
+                <div style="font-size: 12px; line-height: 1.4; opacity: 0.9;">
+                    • 企業內部培訓<br>
+                    • 中小學教師增能<br>
+                    • 高中職學生<br>
+                    • 政府機關員工<br>
+                    • 一般民眾<br>
+                    • 軟體開發團隊
+                </div>
+            </div>
+        </div>
+        
+        <div class="main-content">
+            <div class="main-section">
+                <div class="main-title">演講經歷詳細記錄</div>
+                
+                <div style="margin-bottom: 12px;">
+                    <h3 style="color: #2c3e50; font-size: 14px; margin-bottom: 6px; border-left: 3px solid #3498db; padding-left: 6px;">🎯 簡報設計系列 (10+場)</h3>
+                    
+                    <div class="experience-item">
+                        <div class="experience-header">
+                            <div>
+                                <div class="experience-title">簡報技巧培訓（科技領域）</div>
+                                <div class="experience-company">高雄市立國民教育輔導團</div>
+                            </div>
+                            <div class="experience-date">2022/6/8</div>
+                        </div>
+                        <div class="experience-desc">針對科技領域教師提供專業簡報技巧培訓</div>
+                    </div>
+                    
+                    <div class="experience-item">
+                        <div class="experience-header">
+                            <div>
+                                <div class="experience-title">讓你的簡報從60分到90分</div>
+                                <div class="experience-company">國泰企業共享學堂</div>
+                            </div>
+                            <div class="experience-date">2023/7/26</div>
+                        </div>
+                        <div class="experience-desc">國泰集團內部員工簡報技能提升培訓</div>
+                    </div>
+                    
+                    <div class="experience-item">
+                        <div class="experience-header">
+                            <div>
+                                <div class="experience-title">簡報即戰力技巧講座</div>
+                                <div class="experience-company">新竹市立成德高中</div>
+                            </div>
+                            <div class="experience-date">2021/12/6</div>
+                        </div>
+                        <div class="experience-desc">教師與學生雙場次簡報技巧培訓</div>
+                    </div>
+                    
+                    <div class="experience-item">
+                        <div class="experience-header">
+                            <div>
+                                <div class="experience-title">簡報技巧工作坊</div>
+                                <div class="experience-company">北區小國MAPS實踐家</div>
+                            </div>
+                            <div class="experience-date">2021/12/11</div>
+                        </div>
+                        <div class="experience-desc">實踐家教師簡報技巧工作坊</div>
+                    </div>
+                </div>
+                
+                <div style="margin-bottom: 12px;">
+                    <h3 style="color: #2c3e50; font-size: 14px; margin-bottom: 6px; border-left: 3px solid #2ecc71; padding-left: 6px;">🚀 職涯規劃系列 (4場)</h3>
+                    
+                    <div class="experience-item">
+                        <div class="experience-header">
+                            <div>
+                                <div class="experience-title">勞動部菁英學苑職涯課程【企業專家講堂】</div>
+                                <div class="experience-company">勞動部</div>
+                            </div>
+                            <div class="experience-date">2024/11/3</div>
+                        </div>
+                        <div class="experience-desc">主題：金融×科技：打造未來職場的超級武器</div>
+                    </div>
+                    
+                    <div class="experience-item">
+                        <div class="experience-header">
+                            <div>
+                                <div class="experience-title">生活與職涯規劃-解密科技業不為人知的一面</div>
+                                <div class="experience-company">臺中女兒館</div>
+                            </div>
+                            <div class="experience-date">2023/11/4</div>
+                        </div>
+                        <div class="experience-desc">針對國中到大學學生的職涯探索講座</div>
+                    </div>
+                    
+                    <div class="experience-item">
+                        <div class="experience-header">
+                            <div>
+                                <div class="experience-title">青少年生涯探索號計畫-街頭藝人職涯講座</div>
+                                <div class="experience-company">教育部青年發展署</div>
+                            </div>
+                            <div class="experience-date">2023/9/27</div>
+                        </div>
+                        <div class="experience-desc">與新竹市學生輔導諮商中心合作辦理</div>
+                    </div>
+                </div>
+                
+                <div style="margin-bottom: 12px;">
+                    <h3 style="color: #2c3e50; font-size: 14px; margin-bottom: 6px; border-left: 3px solid #e74c3c; padding-left: 6px;">🤖 AI應用與系統分析系列 (6場)</h3>
+                    
+                    <div class="experience-item">
+                        <div class="experience-header">
+                            <div>
+                                <div class="experience-title">Vibe Coding（自然語言AI開發實作）實作教學工作坊</div>
+                                <div class="experience-company">No code小聚</div>
+                            </div>
+                            <div class="experience-date">2025/07（洽談中）</div>
+                        </div>
+                        <div class="experience-desc">
+                            針對對自然語言操作式有興趣的任何人，提供AI應用實作教學，包含自然語言處理與程式開發整合應用
+                        </div>
+                    </div>
+                    
+                    <div class="experience-item">
+                        <div class="experience-header">
+                            <div>
+                                <div class="experience-title">系統分析101系列課程（三週完整課程）</div>
+                                <div class="experience-company">無間科技股份有限公司</div>
+                            </div>
+                            <div class="experience-date">2024/11</div>
+                        </div>
+                        <div class="experience-desc">
+                            針對軟體PM、SA、PG的系統分析專業培訓：<br>
+                            • 第一週：AXURE RP 基礎與系統分析概論<br>
+                            • 第二週：AXURE 進階功能與 RFP 文件拆解<br>
+                            • 第三週：各類系統與 UX 概念實作討論
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
